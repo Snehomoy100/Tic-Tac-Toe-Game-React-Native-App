@@ -4,7 +4,7 @@ import {
   View,
   TouchableOpacity,
   StyleSheet
-} from 'react-native';
+} from 'react-native'
 
 import {
   Text,
@@ -17,13 +17,14 @@ import {
   Content,
 } from 'native-base'
 
+import Icons from './components/Icons';
 
 
 const App = () => {
   return(
     <>
       <View>
-        <Text style={styles.text}>Hello...!</Text>
+        <Icons></Icons>
       </View>
     </>
   )
