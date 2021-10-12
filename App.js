@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import {
   View,
@@ -15,20 +15,49 @@ import {
   Body,
   Card,
   Content,
+  
 } from 'native-base'
 
 import Icons from './components/Icons';
+import Snackbar from "react-native-snackbar";
+
+
+const itemsArray = new Array(9).fill('empty');
+
 
 
 const App = () => {
+
+  const [isCross, setIsCross] = useState(false);
+  const [winMessage, setWinMessage] = useState('');
+
+  // handler methods
+  const changeItem = (itemNumber) => {
+
+  };
+
+  const reloadGame = () => {
+
+  };
+
+  const checkIsWinner = () => {
+
+  };
+
+
   return(
-    <>
-      <View>
-        <Icons></Icons>
-      </View>
-    </>
-  )
-}
+      <Container style={{backgroundColor: "333945", padding: 5}}>
+        <Header>
+          <Body>
+            <Title>
+              My TicTacToe Game
+            </Title>
+          </Body>
+        </Header>
+        <Icons name="pencil"></Icons>
+      </Container>
+  );
+};
 
 
 const styles = StyleSheet.create({
